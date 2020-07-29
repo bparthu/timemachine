@@ -1,13 +1,4 @@
-(function(name, definition) {
-  if (typeof define === 'function') { // AMD
-    define(definition);
-  } else if (typeof module !== 'undefined' && module.exports) { // Node.js
-    module.exports = definition();
-  } else { // Browser
-    // ECMAScript modules
-    export { definition as timemachine }
-  }
-})('timemachine', function() {
+export default () => {
 
   var OriginalDate = Date,
     Timemachine = {
@@ -99,4 +90,4 @@
 
   return Timemachine;
 
-});
+}
