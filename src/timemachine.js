@@ -1,4 +1,4 @@
-export default () => {
+const tm = () => {
 
   var OriginalDate = Date,
     Timemachine = {
@@ -91,3 +91,5 @@ export default () => {
   return Timemachine;
 
 }
+
+export const timemachine = tm()
