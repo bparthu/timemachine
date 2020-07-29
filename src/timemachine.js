@@ -4,14 +4,8 @@
   } else if (typeof module !== 'undefined' && module.exports) { // Node.js
     module.exports = definition();
   } else { // Browser
-    var timemachine = definition(),
-      global = this,
-      old = global[name];
-    timemachine.noConflict = function() {
-      global[name] = old;
-      return timemachine;
-    };
-    global[name] = timemachine;
+    // ECMAScript modules
+    export { definition as timemachine }
   }
 })('timemachine', function() {
 
